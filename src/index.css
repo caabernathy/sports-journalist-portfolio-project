@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+
+  --color-accent: #D9FF00; /* Electric Yellow / Volt from theme */
+  --color-accent-bright: #eaff00;
+  --color-dark: #050505; /* Deeper black from theme */
+  --color-ink: #111111;
+  --color-brand-blue: #2563eb;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+  
+  .skew-10 {
+    transform: skewX(-10deg);
+  }
+
+  .mask-radial {
+    mask-image: radial-gradient(circle at center, black 0%, transparent 100%);
+  }
+
+  .ambient-glow-yellow {
+    @apply absolute w-[500px] h-[500px] bg-accent rounded-full blur-[180px] opacity-10 pointer-events-none;
+  }
+
+  .ambient-glow-blue {
+    @apply absolute w-[400px] h-[400px] bg-brand-blue rounded-full blur-[150px] opacity-10 pointer-events-none;
+  }
+}
