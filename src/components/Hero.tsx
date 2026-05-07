@@ -43,7 +43,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="max-w-md text-center text-white/50 text-sm md:text-base font-medium mt-8 leading-relaxed"
           >
-            Capturing the split-second moments that define legacies. Specialist in high-velocity track and field and court-side adrenaline.
+            Capturing the moments that make sports history and define enduring legacies.
           </motion.p>
 
           <motion.div 
